@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARE - math | Volunteer Action</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Matte Energetic Palette */
+        :root {
+            --matte-forest: #3A4D39;
+            --matte-olive: #4F6F52;
+            --matte-sage: #739072;
+            --matte-yellow: #D2B48C; /* Muted Mustard/Sand */
+            --matte-cream: #ECE3CE;
+            --deep-charcoal: #2B2B2B;
+        }
+
+        .bg-forest { background-color: var(--matte-forest); }
+        .bg-olive { background-color: var(--matte-olive); }
+        .bg-yellow { background-color: var(--matte-yellow); }
+        .bg-cream { background-color: var(--matte-cream); }
+        
+        .text-forest { color: var(--matte-forest); }
+        .text-yellow { color: var(--matte-yellow); }
+        
+        .hero-matte {
+            background: linear-gradient(rgba(58, 77, 57, 0.85), rgba(58, 77, 57, 0.85)), 
+                        url('https://images.unsplash.com/photo-1513258496099-48168024adb0?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .btn-matte {
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0px var(--deep-charcoal);
+        }
+
+        .btn-matte:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--deep-charcoal);
+        }
+
+        .btn-matte:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px var(--deep-charcoal);
+        }
+
+        .card-matte {
+            border: 1px solid rgba(58, 77, 57, 0.1);
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-[#F8F7F2] text-gray-800 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0">
+                    <span class="text-3xl font-black tracking-tighter text-forest">CARE - math</span>
+                </div>
+                <div class="hidden md:flex space-x-10 font-bold uppercase text-xs tracking-[0.2em]">
+                    <a href="#" class="hover:text-forest transition">About</a>
+                    <a href="#" class="hover:text-forest transition">Programs</a>
+                    <a href="#" class="hover:text-forest transition">Impact</a>
+                    <a href="#" class="bg-yellow text-forest px-6 py-2 rounded-sm btn-matte">Join Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-matte h-[70vh] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-5xl md:text-6xl font-black uppercase mb-6 leading-tight tracking-tight">
+                CARE - <span class="text-yellow">math</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-10 text-gray-200 leading-relaxed italic">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <button class="bg-yellow text-forest font-black px-10 py-4 rounded-sm btn-matte text-sm tracking-widest uppercase">
+                    Get Involved
+                </button>
+                <button class="border border-white text-white font-black px-10 py-4 rounded-sm text-sm tracking-widest uppercase hover:bg-white hover:text-forest transition">
+                    Our Story
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impact Stats Section -->
+    <section class="py-16 bg-forest text-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div>
+                <h2 class="text-5xl font-black text-yellow mb-2 tracking-tighter">01</h2>
+                <p class="text-matte-sage uppercase tracking-[0.3em] text-xs font-bold">Lorem Ipsum</p>
+            </div>
+            <div>
+                <h2 class="text-5xl font-black text-yellow mb-2 tracking-tighter">02</h2>
+                <p class="text-matte-sage uppercase tracking-[0.3em] text-xs font-bold">Dolor Sit</p>
+            </div>
+            <div>
+                <h2 class="text-5xl font-black text-yellow mb-2 tracking-tighter">03</h2>
+                <p class="text-matte-sage uppercase tracking-[0.3em] text-xs font-bold">Amet Consectetur</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <main class="max-w-7xl mx-auto px-4 py-24">
+        
+        <!-- About Section -->
+        <div class="flex flex-col lg:flex-row gap-20 items-center mb-32">
+            <div class="lg:w-1/2">
+                <div class="aspect-video bg-gray-200 rounded-sm overflow-hidden border border-gray-300 relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-400 font-bold uppercase tracking-widest text-xs">
+                        Placeholder Image
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <h3 class="text-forest font-bold tracking-[0.4em] text-xs uppercase mb-4">Section Title</h3>
+                <h2 class="text-4xl font-black mb-8 leading-tight text-gray-800">Lorem ipsum dolor sit amet consectetur.</h2>
+                <div class="space-y-6 text-gray-600 leading-relaxed">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    </p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Section -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-black uppercase tracking-tight text-forest">Our Initiatives</h2>
+            <div class="w-16 h-1 bg-yellow mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Item 1 -->
+            <div class="p-10 card-matte rounded-sm border-t-4 border-t-forest shadow-sm">
+                <h4 class="text-lg font-black mb-4 uppercase tracking-wider">Lorem Ipsum</h4>
+                <p class="text-sm text-gray-600 leading-loose">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                </p>
+            </div>
+            <!-- Item 2 -->
+            <div class="p-10 card-matte rounded-sm border-t-4 border-t-yellow shadow-sm">
+                <h4 class="text-lg font-black mb-4 uppercase tracking-wider">Dolor Sit</h4>
+                <p class="text-sm text-gray-600 leading-loose">
+                    Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                </p>
+            </div>
+            <!-- Item 3 -->
+            <div class="p-10 card-matte rounded-sm border-t-4 border-t-forest shadow-sm">
+                <h4 class="text-lg font-black mb-4 uppercase tracking-wider">Consectetur</h4>
+                <p class="text-sm text-gray-600 leading-loose">
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Call to Action -->
+    <section id="join" class="bg-yellow py-24 text-forest text-center px-4">
+        <h2 class="text-4xl font-black uppercase mb-6 tracking-tighter">Ready to Begin?</h2>
+        <p class="text-lg mb-10 max-w-xl mx-auto italic font-medium opacity-80">
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        </p>
+        <div class="max-w-md mx-auto">
+            <div class="flex flex-col sm:flex-row gap-0 border-2 border-forest p-1">
+                <input type="email" placeholder="Email Address" class="flex-grow px-6 py-4 bg-transparent focus:outline-none text-forest placeholder:text-forest/50 font-bold uppercase text-xs">
+                <button class="bg-forest text-white font-bold px-8 py-4 uppercase text-xs tracking-widest hover:opacity-90 transition">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-charcoal text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start gap-12">
+            <div class="max-w-sm">
+                <span class="text-2xl font-black text-yellow tracking-tighter">CARE - math</span>
+                <p class="mt-4 text-gray-400 text-sm leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-16">
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-yellow">Contact</h5>
+                    <ul class="text-sm text-gray-400 space-y-3">
+                        <li>Lorem Street 123</li>
+                        <li>contact@caremath.org</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-yellow">Social</h5>
+                    <ul class="text-sm text-gray-400 space-y-3">
+                        <li><a href="#" class="hover:text-white transition">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white transition">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/10 text-center text-xs text-gray-500 tracking-widest uppercase">
+            © 2024 CARE - math. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
