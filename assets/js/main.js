@@ -260,3 +260,30 @@
 			});
 
 })(jQuery);
+
+// Personal
+
+document.querySelectorAll('details').forEach((el) => {
+  const summary = el.querySelector('summary');
+  const content = el.querySelector('.content');
+
+  summary.addEventListener('click', (e) => {
+    e.preventDefault(); // Stop the browser from opening it instantly
+    
+	if (el.open) {
+    el.classList.remove('is-open');
+    // Ensure this 500ms matches the 0.5s in your CSS
+    setTimeout(() => { 
+        el.open = false; 
+    }, 500); 
+	} else {
+      // OPENING: Set 'open' attribute, then start animation
+      el.open = true;
+      // Small delay so the browser registers the change before animating
+      window.requestAnimationFrame(() => {
+        el.classList.add('is-open');
+      });
+    }
+  });
+});
+
