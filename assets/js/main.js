@@ -287,3 +287,52 @@ document.querySelectorAll('details').forEach((el) => {
   });
 });
 
+// Data Cloud ++
+
+const bubbles = document.querySelectorAll('.bubble');
+
+// Each bubble gets a unique "dna" object for its own speed and path
+const bubbleData = Array.from(bubbles).map((_,i) => ({
+    xAngle: (i * (Math.PI * 2 / 9)),
+    yAngle: Math.random() * Math.PI * 2,
+    zAngle: (i * (Math.PI * 2 / 9)),
+    // Random speeds for that "slow/fast" organic feel
+    xSpeed: 0.002 + Math.random() * 0.003,
+    ySpeed: 0.003 + Math.random() * 0.004,
+    zSpeed: 0.01
+}));
+
+function animate() {
+    bubbles.forEach((el, i) => {
+        const data = bubbleData[i];
+
+        // Increment angles
+        data.xAngle += (data.xSpeed)*(0.7);
+        data.yAngle += (data.ySpeed)*(0.7);
+        data.zAngle += (data.zSpeed);
+
+        // Calculate positions (-1 to 1 range)
+        // We use different math for X, Y, and Z to avoid circular paths
+        const xSide = Math.cos(data.xAngle) * 25; // Horizontal drift %
+        const ySide = Math.sin(data.yAngle) * 25; // Vertical drift %
+        const zDepth = Math.sin(data.zAngle);      // Depth -1 (far) to 1 (near)
+
+        // Map Z-Depth to visual styles
+        const scale = (zDepth + 2) / 2;       // Range: 0.5 to 1.5
+        const opacity = (zDepth + 2) / 3;     // Range: 0.3 to 1.0
+        const blur = (1 - zDepth) * (1);        // Range: 0px to 4px (Blur when far)
+
+        // Apply styles
+        // We use % for positioning so it stays responsive on your Ubuntu screen
+        el.style.left = `${35 + xSide}%`;
+        el.style.top = `${50 + ySide}%`;
+        el.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        el.style.opacity = opacity;
+        el.style.filter = `blur(${blur}px)`;
+        el.style.zIndex = Math.round(zDepth * 100);
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();

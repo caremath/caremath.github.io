@@ -2420,3 +2420,58 @@ details.is-open .abstract-content {
     color: #7f888f;
     margin-top: 0.5rem;
 }
+
+/* Data Cloud ++ */
+
+.cloud-container {
+    height: 500px;
+    position: relative;
+    background: #ffffff; /* Or match your template bg */
+    overflow: hidden;
+    border: 1px solid #ffffff;
+    perspective: 1000px;
+}
+
+.bubble {
+    position: absolute;
+    padding: 1.2rem 1.8rem;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(5px); /* Modern glass effect */
+    border: 1px solid #60973e; /* Subtle accent color */
+    border-radius: 100px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    text-align: center;
+    color: #3d4449;
+    font-family: inherit;
+    will-change: transform, opacity; /* Optimization for smooth animation */
+}
+
+.bubble strong {
+    display: block;
+    font-size: 1.8rem;
+    color: #74B84B;
+}
+
+/* Logo Grid */
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;       /* Allows the 10 logos to wrap into 2 rows */
+    justify-content: center; /* Centers logos horizontally */
+    align-items: center;     /* THE FIX: Centers logos vertically on the Y-axis */
+    gap: 40px;               /* Consistent spacing between logos */
+}
+
+.logo-item {
+    width: 15%;              /* Sets 5 items per row (approx) */
+    display: flex;
+    justify-content: center;
+    align-items: center;     /* Double-centering for the individual image */
+}
+
+.logo-item img {
+    width: 100%;             /* Your consistent width */
+    height: auto;            /* Maintains aspect ratio */
+    display: block;
+}
