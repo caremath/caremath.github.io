@@ -2475,3 +2475,18 @@ details.is-open .abstract-content {
     height: auto;            /* Maintains aspect ratio */
     display: block;
 }
+
+.col2box {
+  flex:45%;
+  margin: 2.5%;
+  max-width: 45%;
+  padding: 2%
+}
+
+@media screen and (max-width: 600px) {
+  .col2box {
+    flex: 100%;
+    max-width: 100%;
+    padding: 2%;
+  }
+}
